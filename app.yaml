@@ -1,0 +1,13 @@
+name: simple-job
+region: nyc
+jobs:
+  - name: hello-job
+    git:
+      repo: https://github.com/<your-username>/<your-repo>
+      branch: main
+      deploy_on_push: true
+    run_command: "python job.py"
+    environment_slug: python
+    instance_count: 1
+    instance_size_slug: basic-xxs
+    schedule: "0 * * * *" # Runs every hour
