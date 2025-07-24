@@ -3,11 +3,7 @@ region: nyc
 jobs:
   - name: hello-job
     environment_slug: python
-    git:
-      repo: Ajaykumar250/simple-job
-      branch: main
-      deploy_on_push: true
     run_command: "python job.py"
     instance_count: 1
     instance_size_slug: basic-xxs
-    schedule: "0 * * * *"  # every hour
+    schedule: "0 * * * *"
